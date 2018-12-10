@@ -130,7 +130,7 @@
             this.comboBoxMonth.Size = new System.Drawing.Size(100, 21);
             this.comboBoxMonth.TabIndex = 13;
             this.comboBoxMonth.SelectedIndexChanged += new System.EventHandler(this.comboBoxMonth_SelectedIndexChanged_1);
-            this.comboBoxMonth.Validated += new System.EventHandler(this.comboBoxMonth_Validated);
+            //this.comboBoxMonth.Validated += new System.EventHandler(this.comboBoxMonth_Validated);
             // 
             // comboBoxDay
             // 

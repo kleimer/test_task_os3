@@ -37,7 +37,7 @@ namespace calcul
             int k2 = this.Year - k1;
             int k3 = this.Month + 12 * k1 - 2;
 
-            return days[(this.Day + k2 + (k2 / 4) - k2 / 100 + k2 / 400 + (31 * k3) / 12) % 7];
+            return days[Math.Abs(this.Day + k2 + (k2 / 4) - k2 / 100 + k2 / 400 + (31 * k3) / 12) % 7];
         }
 
 

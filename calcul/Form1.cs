@@ -41,10 +41,11 @@ namespace calcul
         {
            // string[] tmp = new string[intNum];
            List <string>  tmp = new List<string>();
-            for ( int i= 1;i <= intNum; i++)
-            {
-                tmp.Add(i.ToString());
-            }
+              for ( int i= 1;i <= intNum; i++)
+              {
+                  tmp.Add(i.ToString());
+              }
+            
             return tmp;
         }
         private void TextBoxValidatedYear(object sender, EventArgs e)
@@ -124,10 +125,12 @@ namespace calcul
 
         private void ValidMonthYear()
         {
-           if ((!String.IsNullOrEmpty(comboBoxMonth.Text)&&!String.IsNullOrEmpty(textBoxYear.Text)))
+           if ((!String.IsNullOrEmpty(comboBoxMonth.Text)&&!String.IsNullOrEmpty(textBoxYear.Text))
+                &&isNum(textBoxYear.Text))
             {
                 int intDay, intMonth, intYear;
                 intMonth = StringToIntMonth(comboBoxMonth.Text);
+              
                 intYear = int.Parse(textBoxYear.Text);
                 intDay = CountDay(intMonth, intYear);
 
@@ -141,10 +144,10 @@ namespace calcul
             
         }
 
-        private void comboBoxMonth_Validated(object sender, EventArgs e)
+       /* private void comboBoxMonth_Validated(object sender, EventArgs e)
         {
-            ValidMonthYear();
-        }
+          //  ValidMonthYear();
+        }*/
 
         private void comboBoxMonth_SelectedIndexChanged_1(object sender, EventArgs e)
         {
